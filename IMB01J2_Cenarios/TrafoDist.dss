@@ -1,0 +1,71 @@
+! TRANSFORMADORES DE DISTRIBUICAO 
+! ALIMENTADOR: 3009
+New Transformer.500594 windings=2 Phases=3 buses=[106977M3009.1.2.3,106977B1500594.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F18866 windings=2 Phases=3 buses=[107174M3009.1.2.3,107174B1F18866.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F21555 windings=2 Phases=3 buses=[107003M3009.1.2.3,107003B1F21555.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F19790 windings=2 Phases=3 buses=[106980M3009.1.2.3,106980B1F19790.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F23062 windings=2 Phases=3 buses=[12428741M3009.1.2.3,12428741B1F23062.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F37218 windings=2 Phases=3 buses=[107023M3009.1.2.3,107023B1F37218.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F21940 windings=2 Phases=3 buses=[107069M3009.1.2.3,107069B1F21940.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F49446 windings=2 Phases=3 buses=[12333925M3009.1.2.3,12333925B1F49446.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F26939 windings=2 Phases=3 buses=[107224M3009.1.2.3,107224B1F26939.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F21267 windings=2 Phases=3 buses=[107002M3009.1.2.3,107002B1F21267.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F18466 windings=2 Phases=3 buses=[106840M3009.1.2.3,106840B1F18466.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F16826 windings=2 Phases=3 buses=[107036M3009.1.2.3,107036B1F16826.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F15272 windings=2 Phases=3 buses=[106792M3009.1.2.3,106792B1F15272.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F18046 windings=2 Phases=3 buses=[103375M3009.1.2.3,103375B1F18046.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F38600 windings=2 Phases=3 buses=[107021M3009.1.2.3,107021B1F38600.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F36250 windings=2 Phases=3 buses=[107026M3009.1.2.3,107026B1F36250.1.2.3] kVAs=[30.0,30.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.67 XHL=3.34
+! ALIMENTADOR: 3009
+New Transformer.F26045 windings=2 Phases=3 buses=[106933M3009.1.2.3,106933B1F26045.1.2.3] kVAs=[45.0,45.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.5 XHL=3.34
+! ALIMENTADOR: 3009
+New Transformer.F22648 windings=2 Phases=3 buses=[107122M3009.1.2.3,107122B1F22648.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F16098 windings=2 Phases=3 buses=[107090M3009.1.2.3,107090B1F16098.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F48094 windings=2 Phases=3 buses=[107088M3009.1.2.3,107088B1F48094.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F24982 windings=2 Phases=3 buses=[107016M3009.1.2.3,107016B1F24982.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F13822 windings=2 Phases=3 buses=[107071M3009.1.2.3,107071B1F13822.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F58371 windings=2 Phases=3 buses=[106746M3009.1.2.3,106746B1F58371.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F23277 windings=2 Phases=3 buses=[106888M3009.1.2.3,106888B1F23277.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F21415 windings=2 Phases=3 buses=[106825M3009.1.2.3,106825B1F21415.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F26466 windings=2 Phases=3 buses=[458904M3009.1.2.3,458904B0F26466.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F24167 windings=2 Phases=3 buses=[600471M3009.1.2.3,600471B0F24167.1.2.3] kVAs=[225.0,225.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.07 XHL=4.53
+! ALIMENTADOR: 3009
+New Transformer.F51609 windings=2 Phases=3 buses=[12533879M3009.1.2.3,12533879B0F51609.1.2.3] kVAs=[45.0,45.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.5 XHL=3.34
+! ALIMENTADOR: 3009
+New Transformer.F58003 windings=2 Phases=3 buses=[12998984M3009.1.2.3,12998984B1F58003.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F59643 windings=2 Phases=3 buses=[13155500M3009.1.2.3,13155500B0F59643.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F58004 windings=2 Phases=3 buses=[12998985M3009.1.2.3,12998985B1F58004.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F48507 windings=2 Phases=3 buses=[12232201M3009.1.2.3,12232201B0F48507.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F58005 windings=2 Phases=3 buses=[12998983M3009.1.2.3,12998983B1F58005.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F51878 windings=2 Phases=3 buses=[12546355M3009.1.2.3,12546355B0F51878.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F53190 windings=2 Phases=3 buses=[12675087M3009.1.2.3,12675087B0F53190.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39

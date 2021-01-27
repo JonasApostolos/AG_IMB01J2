@@ -1,0 +1,29 @@
+clear
+
+redirect EqThAT.dss
+redirect TrafoATMT.dss
+redirect curvas.dss
+redirect CondRamais.dss
+redirect SSDMT.dss
+redirect TrafoDist.dss
+redirect UConMT.dss
+redirect UConMTLoadShapes.dss
+redirect UConBTTD.dss
+redirect UConBTLoadShapes.dss
+
+set loadmult=0.4
+
+New EnergyMeter.Feeder Element = Transformer.1238017
+New Monitor.Potencia_Feeder Transformer.1238017 mode=1 terminal=1 ppolar=no
+
+//////////// curvas Storage + PVSystem ///////////////////////////////////////////////////////////////
+New XYCurve.eff npts=4 Xarray=[0.1, 0.2, 0.4, 1.0] Yarray=[0.86, 0.9, 0.93, 0.97]
+!New LoadShape.loadshape1 interval=1 npts=24 mult = [0, 0,-0.3,-0.45,-0.5,-0.45,-0.3,0,0,0,0,0,0,0,0,0.3,0.5,0.8,0.9,0.8,0.5,0.3,0,0]
+New LoadShape.loadshape1 interval=1 npts=24 mult = [-0.05, 0.45, 0.1, 0, 0, 0.2, 0.325, 0.15, 0.4, 0.775, 0.775, -0.05, -0.85, -0.75, -0.725, -0.375, 0.075, 0.225, 0.3, 0.625, 0.75, 0.725, 0.4, 0.4]
+!New LoadShape.loadshape1 interval=1 npts=24 mult = [0.25, -0.2, -0.2, -0.4, -0.45, -0.35, -0.2, 0.05, 0.05, -0.15, -0.85, -0.65, -0.8, -0.9, -0.8, -0.7, -0.5, 0.25, 1, 0.95, 1, 0.95, 0.75]
+
+New XYCurve.MyPvsT npts=4  xarray=[0  25  75  100]  yarray=[1.2 1.0 0.8  0.6]
+New Loadshape.MyIrrad npts=24 interval=1 mult=[0 0 0 0 0 0 .1 .2 .3  .5  .8  .9  1.0  1.0  .99  .9  .7  .4  .1 0  0  0  0  0]
+New Tshape.MyTemp npts=24 interval=1 temp=[25, 25, 25, 25, 25, 25, 25, 25, 35, 40, 45, 50  60 60  55 40  35  30  25 25 25 25 25 25]
+
+/// Storages

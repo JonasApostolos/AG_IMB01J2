@@ -1,0 +1,856 @@
+Clear 
+! VAMOS QUE VAMOS 
+! EQUIVALENTE DE THEVENIN 
+New Circuit.CABIMB  basekv=69.000  pu=1  phase=3  bus1=CABIMB  MVAsc3=10000000000000000000000  MVAsc1=1000000000000000000000
+! CHAVES SECCIONADORAS DE ALTA TENSAO - CONEXAO COM O EQUIVALENTE DE THEVENIN 
+New linecode.CHAVE_3 nphases = 3 BaseFreq = 60 r1 = 1e-3 x1 = 0.000 r0 = 1e-3 x0 = 0.000 c1 = 0.000 c0 = 0.000
+New Line.IMB12Z1EQTH Phases=3 Switch=YES Bus1=CABIMB.1.2.3 Bus2=CABIMB.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32L55EQTH Phases=3 Switch=YES Bus1=IMB8.1.2.3 Bus2=CABIMB.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32L56EQTH Phases=3 Switch=NO Bus1=IMB4.1.2.3 Bus2=CABIMB.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32Z35EQTH Phases=3 Switch=YES Bus1=CABIMB.1.2.3 Bus2=IMB2.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+! TRANSFORMADORES DE ALTA PARA MEDIA TENSAO 
+New Transformer.1238017 windings=2 Phases=3 buses=[IMB11,IMB12.1.2.3.0] kVAs=[15000,15000] kVs=[69.000,13.800] conns=[delta,wye] tap=1
+! CONDUTORES DE MEDIA TENSAO 
+New Linecode.10010491M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.10039979M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.10041240M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.10046428M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.10048910M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10083M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.10094M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.10114113M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.10162742M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.101883M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.10205140M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.102171M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.10232122M R1=0.441 X1=0.4531 normamps=274.0 units=km 
+New Linecode.10317M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.10349904M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.10351095M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.10354M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.10357M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.1037M R1=1.308 X1=0.4993 normamps=130.0 units=km 
+New Linecode.10385002M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.10391009M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10420M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.10422893M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10434517M R1=0.138 X1=0.379 normamps=140.0 units=km 
+New Linecode.10446132M R1=0.138 X1=0.379 normamps=140.0 units=km 
+New Linecode.10493017M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10494M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.105000M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.10500M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.105018M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.10507604M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.10509919M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.105126M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.10514915M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.1054218M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.1055379M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.10556M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.1055991M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.10563M R1=1.308 X1=0.4993 normamps=130.0 units=km 
+New Linecode.1056478M R1=2.469 X1=0.1 normamps=100.0 units=km 
+New Linecode.105763M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.10576409M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10590316M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.10618669M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.10633M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.10636779M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.10645936M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.10651408M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.10661025M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.10671157M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.10673241M R1=0.305 X1=0.2 normamps=270.0 units=km 
+New Linecode.106878M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.10695205M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.1069618M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.1070153M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.107205M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.10722753M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.10738078M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.10765128M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10766720M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.10808M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.10823082M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.10833184M R1=0.305 X1=0.2 normamps=270.0 units=km 
+New Linecode.10873192M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10882450M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.10902267M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.10905779M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.109075M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.1092651M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.10932828M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.10935798M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.10949520M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.10953865M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.10976178M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.109814M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.10984380M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.10986919M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.10991673M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.10998967M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.11034887M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11035409M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11036344M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.11048215M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11053333M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11066892M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11067031M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.11073293M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.11087731M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11087755M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.11089435M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11125M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.11138506M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11142122M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11142359M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11152427M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11157423M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.11168626M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11171442M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.11173784M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11179074M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11185085M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11192844M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.11192845M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.11195922M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11195928M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11195930M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11225550M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11242529M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.11261305M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11262023M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11262969M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11283187M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11292819M R1=0.175 X1=0.1 normamps=500.0 units=km 
+New Linecode.11308597M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.11313169M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.11320994M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11321732M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11323126M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11330M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11332590M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.113330M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.11336839M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11344205M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11345039M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.11345050M R1=0.289 X1=0.1411 normamps=242.0 units=km 
+New Linecode.11347269M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.11353224M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11353773M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11360872M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11374834M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11383185M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11390552M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11392208M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11395473M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11413428M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.11419269M R1=0.441 X1=0.4531 normamps=274.0 units=km 
+New Linecode.11420231M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11420232M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11420234M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.11420235M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.11420236M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.11431287M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.114387M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11438807M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11441941M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11444683M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11448024M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11448845M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11462075M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.11474773M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11474828M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.11477103M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.11485271M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11485909M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11496404M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.11497481M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.11498616M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.11505344M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11505943M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11523907M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.11532362M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11532365M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.11532366M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.11532645M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.11548581M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11550050M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11551591M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.11561160M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11566777M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.11566780M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.11569734M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11595059M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11596256M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11596328M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11603809M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.11606908M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11610514M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.116142M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.11618368M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11630520M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11631683M R1=0.441 X1=0.4531 normamps=274.0 units=km 
+New Linecode.11632855M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.11632982M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11635432M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.11638216M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.11645792M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.11646035M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.11648091M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.11650227M R1=0.289 X1=0.1411 normamps=242.0 units=km 
+New Linecode.11659413M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11659475M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11659591M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11664014M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11667257M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.11668594M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11673707M R1=0.22 X1=0.425 normamps=430.0 units=km 
+New Linecode.11679458M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.11681954M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11685306M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.11697596M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11712922M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11713002M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11713049M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11715315M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11719822M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11719823M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11719824M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11720055M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.11720056M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.11720057M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.1172454M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11726036M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11727866M R1=0.056 X1=0.1533 normamps=177.0 units=km 
+New Linecode.11732993M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.11747969M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.11757495M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.11765151M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11787334M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11795805M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.11798659M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.11800229M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.11800409M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11804140M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.11804663M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.11805713M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11807877M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11808211M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.11810641M R1=1.308 X1=0.4993 normamps=130.0 units=km 
+New Linecode.11818691M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.11822517M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11829503M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11830935M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.11835957M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11841238M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.11844909M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11850315M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.11850367M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.11850481M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.11880883M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11896297M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.11900620M R1=0.15 X1=0.1 normamps=50.0 units=km 
+New Linecode.11937837M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11939549M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.11950863M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11952729M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11956057M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11961368M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.11969130M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.11969131M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11978331M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11982315M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.11985479M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11987565M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.11993772M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.11994031M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.11998158M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.11999784M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.119M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.12000958M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12004822M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.12005247M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.12006113M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.12006806M R1=0.2 X1=0.1 normamps=22.0 units=km 
+New Linecode.12009169M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.12009888M R1=0.2 X1=0.1 normamps=22.0 units=km 
+New Linecode.12014186M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.12047533M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.12054690M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12057009M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.12058001M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.12059012M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12060310M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.12061964M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12064675M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.12075158M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.12081109M R1=2.469 X1=0.1 normamps=100.0 units=km 
+New Linecode.12084042M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.12085998M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12089305M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.12089308M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.12096274M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.12097041M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.12097048M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.12100733M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.12114400M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.12118784M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.12131296M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12144876M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.12162739M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.12163200M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.12167588M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.12175094M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.12188133M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.12189094M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.12189514M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12189728M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12190533M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.12193291M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.12195162M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.12196263M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.12196305M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.12196337M R1=0.138 X1=0.379 normamps=140.0 units=km 
+New Linecode.12201930M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.12204378M R1=0.289 X1=0.1411 normamps=242.0 units=km 
+New Linecode.1237082M R1=0.138 X1=0.3899 normamps=646.0 units=km 
+New Linecode.12607M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.12684M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.12763M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.12796M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.1282908M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.128M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.1307095M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.1314677M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.13149M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.131M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.132093M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.1327777M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.13288M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.1329925M R1=0.22 X1=0.425 normamps=430.0 units=km 
+New Linecode.1332073M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.133705M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.1378226M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.138220M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.138637M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.138953M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.141881M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.1438434M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.1455966M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.146514M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.14736M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.1494778M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.1494968M R1=1.308 X1=0.4993 normamps=130.0 units=km 
+New Linecode.1503012M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.1505003M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.15114M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.15254M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.1527153M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.1531551M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.1569110M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.157052M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.1581688M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.160453M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.1613571M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.161M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.164786M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.164928M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.165095M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.166556M R1=1.308 X1=0.4993 normamps=130.0 units=km 
+New Linecode.16685M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.16873M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.16929M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.1697748M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.17447M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.1748797M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.1769141M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.178830M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.17996M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.1811655M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.1824M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.183686M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.1846940M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.186730M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.187626M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.187675M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.187687M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.187811M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.187932M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.1894951M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.1938M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.197782M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.198349M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.199964M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.203212M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.203M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.204600M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.204832M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.204883M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.2060036M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.206039M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.206657M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.21013M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.211116M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.212652M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.212876M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.214524M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.216601M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.218873M R1=0.138 X1=0.379 normamps=140.0 units=km 
+New Linecode.219M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.2209345M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.224355M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.2250M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.2276547M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.2276585M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.2277591M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.2285M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.229071M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.2325579M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.2326274M R1=2.469 X1=0.1 normamps=100.0 units=km 
+New Linecode.232656M R1=0.138 X1=0.379 normamps=140.0 units=km 
+New Linecode.2326969M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.2341083M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.2342498M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.2416205M R1=2.469 X1=0.1 normamps=100.0 units=km 
+New Linecode.241924M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.246182M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.2541419M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.254689M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.2555622M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.2579300M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.2631579M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.2659828M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.2674366M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.2692821M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.269395M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.273021M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.2749227M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.2840144M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.2871647M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.2876717M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.29065M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.29235M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.29445M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.3016246M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.3067138M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.30999M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.3207565M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.3210327M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.3224468M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.3263686M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.3277177M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.3281261M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.3281706M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.3293553M R1=2.469 X1=0.1 normamps=100.0 units=km 
+New Linecode.3304983M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.3336098M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.33419M R1=1.308 X1=0.4993 normamps=130.0 units=km 
+New Linecode.3352269M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.33751M R1=0.138 X1=0.3899 normamps=646.0 units=km 
+New Linecode.3380796M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.342813M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.3457520M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.3494098M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.3496218M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.3513687M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.3543092M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.3546020M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.3562087M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.3597309M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.36678M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.368M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.3717092M R1=0.056 X1=0.1533 normamps=177.0 units=km 
+New Linecode.3746828M R1=0.991 X1=0.3212 normamps=149.0 units=km 
+New Linecode.378976M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.3795342M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.3853820M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.3889509M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.390431M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.3926865M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.3931047M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.3979940M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.3991101M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.4001323M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.4010894M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.4014068M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.4014070M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.4015210M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.4026714M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.404M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.4056322M R1=0.596 X1=0.1711 normamps=157.0 units=km 
+New Linecode.4106908M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.4108570M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.4244M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.4252516M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.445M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.5038098M R1=0.22 X1=0.154 normamps=300.0 units=km 
+New Linecode.5039654M R1=0.22 X1=0.154 normamps=300.0 units=km 
+New Linecode.51819M R1=0.306 X1=0.4236 normamps=380.0 units=km 
+New Linecode.5217M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.52501M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.530M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.532184M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.5675M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.59175M R1=0.22 X1=0.425 normamps=430.0 units=km 
+New Linecode.59581M R1=0.175 X1=0.1 normamps=500.0 units=km 
+New Linecode.608553M R1=0.056 X1=0.1533 normamps=177.0 units=km 
+New Linecode.608558M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.625M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.650675M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.654143M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.654157M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.654565M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+New Linecode.661093M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.662432M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.662547M R1=0.195 X1=0.3908 normamps=530.0 units=km 
+New Linecode.6781M R1=0.441 X1=0.4531 normamps=274.0 units=km 
+New Linecode.68249M R1=0.305 X1=0.4362 normamps=360.0 units=km 
+New Linecode.683565M R1=0.175 X1=0.1411 normamps=311.0 units=km 
+New Linecode.68611M R1=0.175 X1=0.1 normamps=500.0 units=km 
+New Linecode.691016M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.691075M R1=0.087 X1=0.1273 normamps=457.0 units=km 
+New Linecode.69362M R1=0.305 X1=0.154 normamps=228.0 units=km 
+New Linecode.69520M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.700M R1=0.613 X1=0.4483 normamps=242.0 units=km 
+New Linecode.7020M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.7134M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.720M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.724785M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.744148M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.74441M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.74943M R1=0.143 X1=0.1327 normamps=308.0 units=km 
+New Linecode.75507M R1=0.506 X1=0.2969 normamps=229.0 units=km 
+New Linecode.75818M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.770116M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.770382M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.77613M R1=0.07 X1=0.1235 normamps=516.0 units=km 
+New Linecode.810393M R1=1.308 X1=0.4993 normamps=130.0 units=km 
+New Linecode.8182M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.821746M R1=0.195 X1=0.402 normamps=514.0 units=km 
+New Linecode.822215M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.824M R1=0.975 X1=0.4672 normamps=180.0 units=km 
+New Linecode.839479M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.849929M R1=0.441 X1=0.4531 normamps=274.0 units=km 
+New Linecode.849958M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.850667M R1=0.188 X1=0.1 normamps=300.0 units=km 
+New Linecode.850669M R1=0.15 X1=0.1 normamps=50.0 units=km 
+New Linecode.858863M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.859013M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.893M R1=1.551 X1=0.496 normamps=134.0 units=km 
+New Linecode.90853M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.908M R1=1.551 X1=0.52 normamps=140.0 units=km 
+New Linecode.910571M R1=0.441 X1=0.1638 normamps=186.0 units=km 
+New Linecode.91073M R1=0.596 X1=0.4658 normamps=210.0 units=km 
+New Linecode.91382M R1=0.289 X1=0.1411 normamps=242.0 units=km 
+New Linecode.92546M R1=0.486 X1=0.441 normamps=282.0 units=km 
+New Linecode.9314M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.94204M R1=0.486 X1=0.509 normamps=270.0 units=km 
+New Linecode.943096M R1=0.188 X1=0.2589 normamps=438.0 units=km 
+New Linecode.943809M R1=0.827 X1=0.4781 normamps=180.0 units=km 
+New Linecode.960195M R1=0.975 X1=0.5238 normamps=180.0 units=km 
+New Linecode.963153M R1=0.306 X1=0.4716 normamps=340.0 units=km 
+New Linecode.970247M R1=0.613 X1=0.5182 normamps=230.0 units=km 
+! CHAVES SECCIONADORAS DE ALTA TENSAO 
+New Line.IMB32T15 Phases=3 Switch=YES Bus1=IMB10.1.2.3 Bus2=IMB11.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB12Z1 Phases=3 Switch=YES Bus1=IMB5.1.2.3 Bus2=IMB6.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32Z34 Phases=3 Switch=YES Bus1=IMB3.1.2.3 Bus2=IMB4.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32L54 Phases=3 Switch=YES Bus1=IMB4.1.2.3 Bus2=IMB7.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32T16 Phases=3 Switch=YES Bus1=IMB4.1.2.3 Bus2=IMB11.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32L55 Phases=3 Switch=YES Bus1=IMB8.1.2.3 Bus2=IMB02L5.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB12T1 Phases=3 Switch=YES Bus1=IMB8.1.2.3 Bus2=IMB10.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB12Z3 Phases=3 Switch=YES Bus1=IMB2.1.2.3 Bus2=IMB3.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32L56 Phases=3 Switch=YES Bus1=IMB4.1.2.3 Bus2=IMB02L5.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32T14 Phases=3 Switch=YES Bus1=IMB4.1.2.3 Bus2=IMB8.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB12L5 Phases=3 Switch=YES Bus1=IMB7.1.2.3 Bus2=IMB8.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.IMB32Z35 Phases=3 Switch=YES Bus1=CAB02Z3.1.2.3 Bus2=IMB2.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+! CONTROLE DAS CHAVES SECCIONADORAS DE ALTA TENSAO 
+New Swtcontrol.IMB32T15 SwitchedObj=Line.IMB32T15 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB12Z1 SwitchedObj=Line.IMB12Z1 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB32Z34 SwitchedObj=Line.IMB32Z34 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB32L54 SwitchedObj=Line.IMB32L54 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB32T16 SwitchedObj=Line.IMB32T16 SwitchedTerm=1 Action=o lock=yes
+New Swtcontrol.IMB32L55 SwitchedObj=Line.IMB32L55 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB12T1 SwitchedObj=Line.IMB12T1 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB12Z3 SwitchedObj=Line.IMB12Z3 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB32L56 SwitchedObj=Line.IMB32L56 SwitchedTerm=1 Action=o lock=yes
+New Swtcontrol.IMB32T14 SwitchedObj=Line.IMB32T14 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB12L5 SwitchedObj=Line.IMB12L5 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.IMB32Z35 SwitchedObj=Line.IMB32Z35 SwitchedTerm=1 Action=c lock=yes
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO A OLEO 
+! CONTROLE DAS CHAVES SECCIONADORAS DE MEDIA TENSAO TIPO OLEO 
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO FACA 
+New Line.F54412 Phases=3 Switch=YES Bus1=12675646M3009.1.2.3 Bus2=12675646M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.F13179 Phases=3 Switch=YES Bus1=106794M3009.1.2.3 Bus2=106794M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+! CONTROLE DAS CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO FACA 
+New Swtcontrol.F54412 SwitchedObj=Line.F54412 SwitchedTerm=1 Action=c lock=yes
+New Swtcontrol.F13179 SwitchedObj=Line.F13179 SwitchedTerm=1 Action=c lock=yes
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO FACA TRIPOLAR 
+! CONTROLE DAS CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO FACA TRIPOLAR 
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO FUSIVEL 
+New Line.F09263 Phases=3 Switch=YES Bus1=107253M3009.1.2.3 Bus2=107253M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.F18837 Phases=3 Switch=YES Bus1=106929M3009.1.2.3 Bus2=106929M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.F24160 Phases=3 Switch=YES Bus1=107080M3009.1.2.3 Bus2=107080M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.F57998 Phases=3 Switch=YES Bus1=12995424M3009.1.2.3 Bus2=12995424M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.F21953 Phases=3 Switch=YES Bus1=107156M3009.1.2.3 Bus2=107156M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.F54142 Phases=3 Switch=YES Bus1=107052M3009.1.2.3 Bus2=107052M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+New Line.F50601 Phases=3 Switch=YES Bus1=106963M3009.1.2.3 Bus2=106963M3009S.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+! CONTROLE DAS CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO FUSIVEL 
+New Fuse.F09263 MonitoredObj=Line.F09263 SwitchedObj=Line.F09263 SwitchedTerm=1 FuseCurve=1H RatedCurrent=1
+New Fuse.F18837 MonitoredObj=Line.F18837 SwitchedObj=Line.F18837 SwitchedTerm=1 FuseCurve=1H RatedCurrent=1
+New Fuse.F24160 MonitoredObj=Line.F24160 SwitchedObj=Line.F24160 SwitchedTerm=1 FuseCurve=1H RatedCurrent=1
+New Fuse.F57998 MonitoredObj=Line.F57998 SwitchedObj=Line.F57998 SwitchedTerm=1 FuseCurve=15K RatedCurrent=1
+New Fuse.F21953 MonitoredObj=Line.F21953 SwitchedObj=Line.F21953 SwitchedTerm=1 FuseCurve=1H RatedCurrent=1
+New Fuse.F54142 MonitoredObj=Line.F54142 SwitchedObj=Line.F54142 SwitchedTerm=1 FuseCurve=15K RatedCurrent=1
+New Fuse.F50601 MonitoredObj=Line.F50601 SwitchedObj=Line.F50601 SwitchedTerm=1 FuseCurve=10K RatedCurrent=1
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO DISJUNTOR 
+New Line.IMB11J2 Phases=3 Switch=YES Bus1=IMB17.1.2.3 Bus2=IMB01J2.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+! CONTROLE DAS CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO DISJUNTOR 
+New Relay.IMB11J2 MonitoredObj=Line.IMB11J2 SwitchedObj=Line.IMB11J2 SwitchedTerm=1 type=current
+! CHAVES SECCIONADORAS RELIGADORES DE MEDIA TENSAO 
+! CHAVES SECCIONADORAS RELIGADORES DE MEDIA TENSAO  
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO TRIPOLAR SUBESTACAO
+New Line.IMB31J24 Phases=3 Switch=YES Bus1=IMB14.1.2.3 Bus2=IMB17.1.2.3 length=0.0001 LineCode=CHAVE_3  units=km enabled=true
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO TRIPOLAR SUBESTACAO 
+New Swtcontrol.IMB31J24 SwitchedObj=Line.IMB31J24 SwitchedTerm=1 Action=c lock=yes
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO UNIPOLAR SUBESTACAO
+! CHAVES SECCIONADORAS DE MEDIA TENSAO DO TIPO UNIPOLAR SUBESTACAO 
+! SEGMENTOS DE LINHA DE MEDIA TENSAO 
+New Line.129693 Phases=3 Bus1=107015M3009.1.2.3 Bus2=106899M3009.1.2.3 Linecode=2250M Length=0.03 units=km
+New Line.327199 Phases=3 Bus1=107015M3009.1.2.3 Bus2=106888M3009.1.2.3 Linecode=2250M Length=0.026 units=km
+New Line.129337 Phases=3 Bus1=106921M3009.1.2.3 Bus2=106933M3009.1.2.3 Linecode=2250M Length=0.012 units=km
+New Line.327150 Phases=3 Bus1=107153M3009.1.2.3 Bus2=107145M3009.1.2.3 Linecode=2250M Length=0.041 units=km
+New Line.129785 Phases=3 Bus1=107021M3009.1.2.3 Bus2=107030M3009.1.2.3 Linecode=2250M Length=0.04 units=km
+New Line.704744 Phases=3 Bus1=107061M3009.1.2.3 Bus2=107069M3009.1.2.3 Linecode=2250M Length=0.019 units=km
+New Line.129349 Phases=3 Bus1=106933M3009.1.2.3 Bus2=106813M3009.1.2.3 Linecode=2250M Length=0.025 units=km
+New Line.129867 Phases=3 Bus1=107053M3009.1.2.3 Bus2=107061M3009.1.2.3 Linecode=2250M Length=0.03 units=km
+New Line.255814 Phases=3 Bus1=106813M3009.1.2.3 Bus2=106840M3009.1.2.3 Linecode=2250M Length=0.021 units=km
+New Line.129756 Phases=3 Bus1=107154M3009.1.2.3 Bus2=107156M3009.1.2.3 Linecode=2250M Length=0.026 units=km
+New Line.129318 Phases=3 Bus1=106899M3009.1.2.3 Bus2=106921M3009.1.2.3 Linecode=2250M Length=0.027 units=km
+New Line.327144 Phases=3 Bus1=107080M3009S.1.2.3 Bus2=107044M3009.1.2.3 Linecode=2250M Length=0.05 units=km
+New Line.129813 Phases=3 Bus1=107034M3009.1.2.3 Bus2=107039M3009.1.2.3 Linecode=2250M Length=0.029 units=km
+New Line.327153 Phases=3 Bus1=107044M3009.1.2.3 Bus2=107023M3009.1.2.3 Linecode=2250M Length=0.034 units=km
+New Line.129769 Phases=3 Bus1=107156M3009S.1.2.3 Bus2=107021M3009.1.2.3 Linecode=2250M Length=0.044 units=km
+New Line.327151 Phases=3 Bus1=107023M3009.1.2.3 Bus2=107153M3009.1.2.3 Linecode=2250M Length=0.027 units=km
+New Line.129847 Phases=3 Bus1=107039M3009.1.2.3 Bus2=107053M3009.1.2.3 Linecode=2250M Length=0.037 units=km
+New Line.129790 Phases=3 Bus1=107030M3009.1.2.3 Bus2=107034M3009.1.2.3 Linecode=2250M Length=0.026 units=km
+New Line.255820 Phases=3 Bus1=107145M3009.1.2.3 Bus2=107135M3009.1.2.3 Linecode=2250M Length=0.035 units=km
+New Line.129676 Phases=3 Bus1=107008M3009.1.2.3 Bus2=107015M3009.1.2.3 Linecode=2250M Length=0.025 units=km
+New Line.129843 Phases=3 Bus1=107036M3009.1.2.3 Bus2=107050M3009.1.2.3 Linecode=530M Length=0.017 units=km
+New Line.129798 Phases=3 Bus1=107154M3009.1.2.3 Bus2=107036M3009.1.2.3 Linecode=530M Length=0.039 units=km
+New Line.4085711 Phases=3 Bus1=106991M3009.1.2.3 Bus2=107003M3009.1.2.3 Linecode=203M Length=0.032 units=km
+New Line.11985770 Phases=3 Bus1=107004M3009.1.2.3 Bus2=13155502M3009.1.2.3 Linecode=203M Length=0.008 units=km
+New Line.11985769 Phases=3 Bus1=13155502M3009.1.2.3 Bus2=13155501M3009.1.2.3 Linecode=203M Length=0.019 units=km
+New Line.129588 Phases=3 Bus1=106974M3009.1.2.3 Bus2=106981M3009.1.2.3 Linecode=203M Length=0.021 units=km
+New Line.11756958 Phases=3 Bus1=12998985M3009.1.2.3 Bus2=12998983M3009.1.2.3 Linecode=203M Length=0.019 units=km
+New Line.10659782 Phases=3 Bus1=12224058M3009.1.2.3 Bus2=107084M3009.1.2.3 Linecode=203M Length=0.016 units=km
+New Line.10670908 Phases=3 Bus1=107092M3009.1.2.3 Bus2=12232202M3009.1.2.3 Linecode=203M Length=0.017 units=km
+New Line.10659783 Phases=3 Bus1=12224058M3009.1.2.3 Bus2=106959M3009.1.2.3 Linecode=203M Length=0.021 units=km
+New Line.10811872 Phases=3 Bus1=107092M3009.1.2.3 Bus2=12333925M3009.1.2.3 Linecode=203M Length=0.01 units=km
+New Line.129910 Phases=3 Bus1=107052M3009S.1.2.3 Bus2=107081M3009.1.2.3 Linecode=203M Length=0.032 units=km
+New Line.11751968 Phases=3 Bus1=12995423M3009.1.2.3 Bus2=12995422M3009.1.2.3 Linecode=203M Length=0.012 units=km
+New Line.10944882 Phases=3 Bus1=107111M3009.1.2.3 Bus2=12428741M3009.1.2.3 Linecode=203M Length=0.015 units=km
+New Line.11092753 Phases=3 Bus1=107223M3009.1.2.3 Bus2=107219M3009.1.2.3 Linecode=203M Length=0.021 units=km
+New Line.10659781 Phases=3 Bus1=107084M3009.1.2.3 Bus2=107088M3009.1.2.3 Linecode=203M Length=0.018 units=km
+New Line.10811871 Phases=3 Bus1=12333925M3009.1.2.3 Bus2=9726976M3009.1.2.3 Linecode=203M Length=0.018 units=km
+New Line.11751969 Phases=3 Bus1=12995424M3009S.1.2.3 Bus2=12995423M3009.1.2.3 Linecode=203M Length=0.019 units=km
+New Line.130072 Phases=3 Bus1=107129M3009.1.2.3 Bus2=107111M3009.1.2.3 Linecode=203M Length=0.027 units=km
+New Line.11092754 Phases=3 Bus1=107094M3009.1.2.3 Bus2=107223M3009.1.2.3 Linecode=203M Length=0.015 units=km
+New Line.11489977 Phases=3 Bus1=12813731M3009.1.2.3 Bus2=107129M3009.1.2.3 Linecode=203M Length=0.014 units=km
+New Line.130108 Phases=3 Bus1=107136M3009.1.2.3 Bus2=12813731M3009.1.2.3 Linecode=203M Length=0.01 units=km
+New Line.129721 Phases=3 Bus1=107143M3009.1.2.3 Bus2=12813732M3009.1.2.3 Linecode=203M Length=0.023 units=km
+New Line.11092756 Phases=3 Bus1=12428741M3009.1.2.3 Bus2=107103M3009.1.2.3 Linecode=203M Length=0.008 units=km
+New Line.11756957 Phases=3 Bus1=12998983M3009.1.2.3 Bus2=12998984M3009.1.2.3 Linecode=203M Length=0.017 units=km
+New Line.129387 Phases=3 Bus1=106845M3009.1.2.3 Bus2=106867M3009.1.2.3 Linecode=720M Length=0.013 units=km
+New Line.585867 Phases=3 Bus1=504585M3009.1.2.3 Bus2=107016M3009.1.2.3 Linecode=720M Length=0.013 units=km
+New Line.129466 Phases=3 Bus1=106794M3009S.1.2.3 Bus2=103385M3009.1.2.3 Linecode=720M Length=0.006 units=km
+New Line.129462 Phases=3 Bus1=106792M3009.1.2.3 Bus2=106794M3009.1.2.3 Linecode=720M Length=0.013 units=km
+New Line.129568 Phases=3 Bus1=106959M3009.1.2.3 Bus2=106974M3009.1.2.3 Linecode=203M Length=0.029 units=km
+New Line.11751967 Phases=3 Bus1=12995422M3009.1.2.3 Bus2=12998985M3009.1.2.3 Linecode=203M Length=0.032 units=km
+New Line.11489979 Phases=3 Bus1=12184083M3009.1.2.3 Bus2=107143M3009.1.2.3 Linecode=203M Length=0.021 units=km
+New Line.4085710 Phases=3 Bus1=106981M3009.1.2.3 Bus2=106991M3009.1.2.3 Linecode=203M Length=0.03 units=km
+New Line.11985768 Phases=3 Bus1=13155501M3009.1.2.3 Bus2=13155500M3009.1.2.3 Linecode=203M Length=0.006 units=km
+New Line.10659780 Phases=3 Bus1=107088M3009.1.2.3 Bus2=106953M3009.1.2.3 Linecode=203M Length=0.029 units=km
+New Line.11092752 Phases=3 Bus1=107219M3009.1.2.3 Bus2=12533880M3009.1.2.3 Linecode=203M Length=0.028 units=km
+New Line.11092751 Phases=3 Bus1=107219M3009.1.2.3 Bus2=12533879M3009.1.2.3 Linecode=203M Length=0.008 units=km
+New Line.10659784 Phases=3 Bus1=107081M3009.1.2.3 Bus2=12224058M3009.1.2.3 Linecode=203M Length=0.014 units=km
+New Line.129741 Phases=3 Bus1=107154M3009.1.2.3 Bus2=12184083M3009.1.2.3 Linecode=203M Length=0.021 units=km
+New Line.129850 Phases=3 Bus1=107050M3009.1.2.3 Bus2=107052M3009.1.2.3 Linecode=203M Length=0.014 units=km
+New Line.11092755 Phases=3 Bus1=107103M3009.1.2.3 Bus2=107094M3009.1.2.3 Linecode=203M Length=0.011 units=km
+New Line.555629 Phases=3 Bus1=106923M3009.1.2.3 Bus2=106905M3009.1.2.3 Linecode=720M Length=0.032 units=km
+New Line.11489978 Phases=3 Bus1=12813732M3009.1.2.3 Bus2=107136M3009.1.2.3 Linecode=203M Length=0.017 units=km
+New Line.129395 Phases=3 Bus1=106867M3009.1.2.3 Bus2=106746M3009.1.2.3 Linecode=720M Length=0.028 units=km
+New Line.4085712 Phases=3 Bus1=107003M3009.1.2.3 Bus2=104787922M3009.1.2.3 Linecode=203M Length=0.022 units=km
+New Line.129454 Phases=3 Bus1=106781M3009.1.2.3 Bus2=106792M3009.1.2.3 Linecode=720M Length=0.032 units=km
+New Line.129428 Phases=3 Bus1=106758M3009.1.2.3 Bus2=106768M3009.1.2.3 Linecode=720M Length=0.025 units=km
+New Line.585866 Phases=3 Bus1=107004M3009.1.2.3 Bus2=504585M3009.1.2.3 Linecode=720M Length=0.015 units=km
+New Line.129345 Phases=3 Bus1=106929M3009.1.2.3 Bus2=106944M3009.1.2.3 Linecode=720M Length=0.028 units=km
+New Line.129510 Phases=3 Bus1=107080M3009.1.2.3 Bus2=106954M3009.1.2.3 Linecode=720M Length=0.033 units=km
+New Line.129643 Phases=3 Bus1=106982M3009.1.2.3 Bus2=106996M3009.1.2.3 Linecode=720M Length=0.038 units=km
+New Line.555627 Phases=3 Bus1=106929M3009S.1.2.3 Bus2=106923M3009.1.2.3 Linecode=720M Length=0.013 units=km
+New Line.129368 Phases=3 Bus1=106825M3009.1.2.3 Bus2=106845M3009.1.2.3 Linecode=720M Length=0.022 units=km
+New Line.538401 Phases=3 Bus1=107081M3009.1.2.3 Bus2=458904M3009.1.2.3 Linecode=720M Length=0.013 units=km
+New Line.129593 Phases=3 Bus1=106977M3009.1.2.3 Bus2=106982M3009.1.2.3 Linecode=720M Length=0.025 units=km
+New Line.129295 Phases=3 Bus1=106897M3009.1.2.3 Bus2=106909M3009.1.2.3 Linecode=720M Length=0.024 units=km
+New Line.129576 Phases=3 Bus1=106963M3009.1.2.3 Bus2=106977M3009.1.2.3 Linecode=720M Length=0.037 units=km
+New Line.129356 Phases=3 Bus1=106944M3009.1.2.3 Bus2=106825M3009.1.2.3 Linecode=720M Length=0.023 units=km
+New Line.129689 Phases=3 Bus1=107016M3009.1.2.3 Bus2=106897M3009.1.2.3 Linecode=720M Length=0.031 units=km
+New Line.129411 Phases=3 Bus1=106746M3009.1.2.3 Bus2=106758M3009.1.2.3 Linecode=720M Length=0.022 units=km
+New Line.129530 Phases=3 Bus1=106954M3009.1.2.3 Bus2=106963M3009.1.2.3 Linecode=720M Length=0.024 units=km
+New Line.129435 Phases=3 Bus1=106768M3009.1.2.3 Bus2=106781M3009.1.2.3 Linecode=720M Length=0.026 units=km
+New Line.129333 Phases=3 Bus1=106909M3009.1.2.3 Bus2=106929M3009.1.2.3 Linecode=720M Length=0.029 units=km
+New Line.129898 Phases=3 Bus1=107050M3009.1.2.3 Bus2=107080M3009.1.2.3 Linecode=720M Length=0.033 units=km
+New Line.129640 Phases=3 Bus1=106996M3009.1.2.3 Bus2=103376M3009.1.2.3 Linecode=720M Length=0.018 units=km
+New Line.129659 Phases=3 Bus1=106996M3009.1.2.3 Bus2=107004M3009.1.2.3 Linecode=720M Length=0.022 units=km
+New Line.130154 Phases=3 Bus1=107236M3009.1.2.3 Bus2=107253M3009.1.2.3 Linecode=720M Length=0.027 units=km
+New Line.708192 Phases=3 Bus1=106909M3009.1.2.3 Bus2=694708M3009.1.2.3 Linecode=720M Length=0.006 units=km
+New Line.11357554 Phases=3 Bus1=IMB01J2.1.2.3 Bus2=12721935M3009.1.2.3 Linecode=113330M Length=0.006 units=km
+New Line.11350948 Phases=3 Bus1=12716993M3009.1.2.3 Bus2=12716997M3009.1.2.3 Linecode=113330M Length=0.009 units=km
+New Line.11360128 Phases=3 Bus1=12716997M3009.1.2.3 Bus2=12721935M3009.1.2.3 Linecode=113330M Length=0.014 units=km
+New Line.11350947 Phases=3 Bus1=12675646M3009S.1.2.3 Bus2=12716993M3009.1.2.3 Linecode=113330M Length=0.015 units=km
+New Line.11288667 Phases=3 Bus1=107094M3009.1.2.3 Bus2=12675087M3009.1.2.3 Linecode=1824M Length=0.01 units=km
+New Line.130064 Phases=3 Bus1=107107M3009.1.2.3 Bus2=107125M3009.1.2.3 Linecode=161M Length=0.029 units=km
+New Line.130248 Phases=3 Bus1=107276M3009.1.2.3 Bus2=107290M3009.1.2.3 Linecode=161M Length=0.029 units=km
+New Line.619483 Phases=3 Bus1=107212M3009.1.2.3 Bus2=107217M3009.1.2.3 Linecode=161M Length=0.027 units=km
+New Line.129608 Phases=3 Bus1=106985M3009.1.2.3 Bus2=106986M3009.1.2.3 Linecode=161M Length=0.005 units=km
+New Line.129973 Phases=3 Bus1=107195M3009.1.2.3 Bus2=107212M3009.1.2.3 Linecode=161M Length=0.037 units=km
+New Line.495701 Phases=3 Bus1=107125M3009.1.2.3 Bus2=107118M3009.1.2.3 Linecode=161M Length=0.021 units=km
+New Line.130186 Phases=3 Bus1=107253M3009S.1.2.3 Bus2=107267M3009.1.2.3 Linecode=161M Length=0.024 units=km
+New Line.130201 Phases=3 Bus1=107253M3009.1.2.3 Bus2=107276M3009.1.2.3 Linecode=161M Length=0.033 units=km
+New Line.504818 Phases=3 Bus1=103375M3009.1.2.3 Bus2=106985M3009.1.2.3 Linecode=161M Length=0.018 units=km
+New Line.129700 Phases=3 Bus1=107125M3009.1.2.3 Bus2=107139M3009.1.2.3 Linecode=161M Length=0.037 units=km
+New Line.130010 Phases=3 Bus1=107212M3009.1.2.3 Bus2=107090M3009.1.2.3 Linecode=161M Length=0.027 units=km
+New Line.129685 Phases=3 Bus1=106895M3009.1.2.3 Bus2=107010M3009.1.2.3 Linecode=161M Length=0.03 units=km
+New Line.619484 Phases=3 Bus1=107217M3009.1.2.3 Bus2=107221M3009.1.2.3 Linecode=161M Length=0.023 units=km
+New Line.619485 Phases=3 Bus1=107221M3009.1.2.3 Bus2=107224M3009.1.2.3 Linecode=161M Length=0.021 units=km
+New Line.493776 Phases=3 Bus1=107118M3009.1.2.3 Bus2=107119M3009.1.2.3 Linecode=161M Length=0.014 units=km
+New Line.493777 Phases=3 Bus1=107119M3009.1.2.3 Bus2=107122M3009.1.2.3 Linecode=161M Length=0.023 units=km
+New Line.2484871 Phases=3 Bus1=8094211M3009.1.2.3 Bus2=107287M3009.1.2.3 Linecode=161M Length=0.023 units=km
+New Line.129656 Phases=3 Bus1=107002M3009.1.2.3 Bus2=107000M3009.1.2.3 Linecode=161M Length=0.017 units=km
+New Line.129514 Phases=3 Bus1=106954M3009.1.2.3 Bus2=107071M3009.1.2.3 Linecode=161M Length=0.046 units=km
+New Line.10571048 Phases=3 Bus1=12155417M3009.1.2.3 Bus2=12155419M3009.1.2.3 Linecode=161M Length=0.006 units=km
+New Line.493779 Phases=3 Bus1=107127M3009.1.2.3 Bus2=107132M3009.1.2.3 Linecode=161M Length=0.025 units=km
+New Line.129879 Phases=3 Bus1=107067M3009.1.2.3 Bus2=107057M3009.1.2.3 Linecode=161M Length=0.011 units=km
+New Line.130264 Phases=3 Bus1=107287M3009.1.2.3 Bus2=107162M3009.1.2.3 Linecode=161M Length=0.042 units=km
+New Line.10670906 Phases=3 Bus1=12232202M3009.1.2.3 Bus2=12232201M3009.1.2.3 Linecode=161M Length=0.003 units=km
+New Line.130318 Phases=3 Bus1=107178M3009.1.2.3 Bus2=107188M3009.1.2.3 Linecode=161M Length=0.048 units=km
+New Line.129284 Phases=3 Bus1=106905M3009.1.2.3 Bus2=106895M3009.1.2.3 Linecode=161M Length=0.031 units=km
+New Line.11111284 Phases=3 Bus1=107008M3009.1.2.3 Bus2=12546355M3009.1.2.3 Linecode=161M Length=0.004 units=km
+New Line.129624 Phases=3 Bus1=106990M3009.1.2.3 Bus2=103375M3009.1.2.3 Linecode=161M Length=0.019 units=km
+New Line.11289475 Phases=3 Bus1=12675649M3009.1.2.3 Bus2=107107M3009.1.2.3 Linecode=161M Length=0.013 units=km
+New Line.129745 Phases=3 Bus1=107146M3009.1.2.3 Bus2=107154M3009.1.2.3 Linecode=161M Length=0.034 units=km
+New Line.10571047 Phases=3 Bus1=107290M3009.1.2.3 Bus2=12155417M3009.1.2.3 Linecode=161M Length=0.007 units=km
+New Line.130280 Phases=3 Bus1=107290M3009.1.2.3 Bus2=107174M3009.1.2.3 Linecode=161M Length=0.033 units=km
+New Line.2484870 Phases=3 Bus1=107267M3009.1.2.3 Bus2=8094211M3009.1.2.3 Linecode=161M Length=0.023 units=km
+New Line.327155 Phases=3 Bus1=107071M3009.1.2.3 Bus2=107067M3009.1.2.3 Linecode=161M Length=0.012 units=km
+New Line.130033 Phases=3 Bus1=107090M3009.1.2.3 Bus2=12675649M3009.1.2.3 Linecode=161M Length=0.018 units=km
+New Line.129604 Phases=3 Bus1=106986M3009.1.2.3 Bus2=106980M3009.1.2.3 Linecode=161M Length=0.038 units=km
+New Line.129724 Phases=3 Bus1=107139M3009.1.2.3 Bus2=107146M3009.1.2.3 Linecode=161M Length=0.026 units=km
+New Line.129925 Phases=3 Bus1=107174M3009.1.2.3 Bus2=107195M3009.1.2.3 Linecode=161M Length=0.04 units=km
+New Line.129651 Phases=3 Bus1=107000M3009.1.2.3 Bus2=106997M3009.1.2.3 Linecode=161M Length=0.025 units=km
+New Line.130287 Phases=3 Bus1=107162M3009.1.2.3 Bus2=107178M3009.1.2.3 Linecode=161M Length=0.045 units=km
+New Line.129672 Phases=3 Bus1=107010M3009.1.2.3 Bus2=107002M3009.1.2.3 Linecode=161M Length=0.014 units=km
+New Line.493778 Phases=3 Bus1=107122M3009.1.2.3 Bus2=107127M3009.1.2.3 Linecode=161M Length=0.015 units=km
+New Line.129647 Phases=3 Bus1=106997M3009.1.2.3 Bus2=106990M3009.1.2.3 Linecode=161M Length=0.036 units=km
+New Line.10937718 Phases=3 Bus1=106963M3009S.1.2.3 Bus2=12423346M3009.1.2.3 Linecode=161M Length=0.006 units=km
+New Line.4066768 Phases=3 Bus1=107026M3009.1.2.3 Bus2=107150M3009.1.2.3 Linecode=908M Length=0.027 units=km
+New Line.10670907 Phases=3 Bus1=12232202M3009.1.2.3 Bus2=107224M3009.1.2.3 Linecode=908M Length=0.003 units=km
+New Line.4066763 Phases=3 Bus1=107069M3009.1.2.3 Bus2=107082M3009.1.2.3 Linecode=908M Length=0.03 units=km
+New Line.4066766 Phases=3 Bus1=107072M3009.1.2.3 Bus2=107041M3009.1.2.3 Linecode=908M Length=0.039 units=km
+New Line.4066764 Phases=3 Bus1=107082M3009.1.2.3 Bus2=107072M3009.1.2.3 Linecode=908M Length=0.008 units=km
+New Line.4066767 Phases=3 Bus1=107041M3009.1.2.3 Bus2=107026M3009.1.2.3 Linecode=908M Length=0.025 units=km
+New Line.11285178 Phases=3 Bus1=12672655M3009.1.2.3 Bus2=12672654M3009.1.2.3 Linecode=128M Length=0.027 units=km
+New Line.11285174 Phases=3 Bus1=107273M3009.1.2.3 Bus2=107289M3009.1.2.3 Linecode=128M Length=0.038 units=km
+New Line.11289471 Phases=3 Bus1=12672656M3009.1.2.3 Bus2=12675648M3009.1.2.3 Linecode=128M Length=0.021 units=km
+New Line.11285179 Phases=3 Bus1=12672656M3009.1.2.3 Bus2=12672655M3009.1.2.3 Linecode=128M Length=0.036 units=km
+New Line.11285176 Phases=3 Bus1=12672653M3009.1.2.3 Bus2=107260M3009.1.2.3 Linecode=128M Length=0.032 units=km
+New Line.11289470 Phases=3 Bus1=12675648M3009.1.2.3 Bus2=12675646M3009.1.2.3 Linecode=128M Length=0.016 units=km
+New Line.11285170 Phases=3 Bus1=107201M3009.1.2.3 Bus2=12672652M3009.1.2.3 Linecode=128M Length=0.032 units=km
+New Line.11285171 Phases=3 Bus1=107191M3009.1.2.3 Bus2=12995424M3009.1.2.3 Linecode=128M Length=0.015 units=km
+New Line.11285169 Phases=3 Bus1=104684772M3009.1.2.3 Bus2=12672652M3009.1.2.3 Linecode=128M Length=0.044 units=km
+New Line.11751970 Phases=3 Bus1=12995424M3009.1.2.3 Bus2=107201M3009.1.2.3 Linecode=128M Length=0.022 units=km
+New Line.11285172 Phases=3 Bus1=107169M3009.1.2.3 Bus2=107191M3009.1.2.3 Linecode=128M Length=0.04 units=km
+New Line.11289476 Phases=3 Bus1=104684772M3009.1.2.3 Bus2=107107M3009.1.2.3 Linecode=128M Length=0.015 units=km
+New Line.11285173 Phases=3 Bus1=107289M3009.1.2.3 Bus2=107169M3009.1.2.3 Linecode=128M Length=0.026 units=km
+New Line.11285177 Phases=3 Bus1=12672654M3009.1.2.3 Bus2=12672653M3009.1.2.3 Linecode=128M Length=0.027 units=km
+New Line.11285175 Phases=3 Bus1=107260M3009.1.2.3 Bus2=107273M3009.1.2.3 Linecode=128M Length=0.03 units=km
+New Line.585884 Phases=3 Bus1=504585M3009.1.2.3 Bus2=504593M3009.1.2.3 Linecode=5217M Length=0.005 units=km
+New Line.130322 Phases=3 Bus1=107188M3009.1.2.3 Bus2=107187M3009.1.2.3 Linecode=5217M Length=0.005 units=km
+New Line.708193 Phases=3 Bus1=694708M3009.1.2.3 Bus2=694709M3009.1.2.3 Linecode=5217M Length=0.009 units=km
+New Line.656382 Phases=3 Bus1=107135M3009.1.2.3 Bus2=600471M3009.1.2.3 Linecode=5217M Length=0.003 units=km
+New Line.4153688 Phases=3 Bus1=107267M3009.1.2.3 Bus2=104831981M3009.1.2.3 Linecode=5217M Length=0.006 units=km
+New Line.12211586 Phases=3 Bus1=13145600M3009.1.2.3 Bus2=107008M3009.1.2.3 Linecode=131M Length=0.013 units=km
+New Line.129667 Phases=3 Bus1=106996M3009.1.2.3 Bus2=13145600M3009.1.2.3 Linecode=131M Length=0.013 units=km
+! TRANSFORMADORES DE DISTRIBUICAO 
+! ALIMENTADOR: 3009
+New Transformer.500594 windings=2 Phases=3 buses=[106977M3009.1.2.3,106977B1500594.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F18866 windings=2 Phases=3 buses=[107174M3009.1.2.3,107174B1F18866.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F21555 windings=2 Phases=3 buses=[107003M3009.1.2.3,107003B1F21555.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F19790 windings=2 Phases=3 buses=[106980M3009.1.2.3,106980B1F19790.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F23062 windings=2 Phases=3 buses=[12428741M3009.1.2.3,12428741B1F23062.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F37218 windings=2 Phases=3 buses=[107023M3009.1.2.3,107023B1F37218.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F21940 windings=2 Phases=3 buses=[107069M3009.1.2.3,107069B1F21940.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F49446 windings=2 Phases=3 buses=[12333925M3009.1.2.3,12333925B1F49446.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F26939 windings=2 Phases=3 buses=[107224M3009.1.2.3,107224B1F26939.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F21267 windings=2 Phases=3 buses=[107002M3009.1.2.3,107002B1F21267.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F18466 windings=2 Phases=3 buses=[106840M3009.1.2.3,106840B1F18466.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F16826 windings=2 Phases=3 buses=[107036M3009.1.2.3,107036B1F16826.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F15272 windings=2 Phases=3 buses=[106792M3009.1.2.3,106792B1F15272.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F18046 windings=2 Phases=3 buses=[103375M3009.1.2.3,103375B1F18046.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F38600 windings=2 Phases=3 buses=[107021M3009.1.2.3,107021B1F38600.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F36250 windings=2 Phases=3 buses=[107026M3009.1.2.3,107026B1F36250.1.2.3] kVAs=[30.0,30.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.67 XHL=3.34
+! ALIMENTADOR: 3009
+New Transformer.F26045 windings=2 Phases=3 buses=[106933M3009.1.2.3,106933B1F26045.1.2.3] kVAs=[45.0,45.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.5 XHL=3.34
+! ALIMENTADOR: 3009
+New Transformer.F22648 windings=2 Phases=3 buses=[107122M3009.1.2.3,107122B1F22648.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F16098 windings=2 Phases=3 buses=[107090M3009.1.2.3,107090B1F16098.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F48094 windings=2 Phases=3 buses=[107088M3009.1.2.3,107088B1F48094.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F24982 windings=2 Phases=3 buses=[107016M3009.1.2.3,107016B1F24982.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F13822 windings=2 Phases=3 buses=[107071M3009.1.2.3,107071B1F13822.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F58371 windings=2 Phases=3 buses=[106746M3009.1.2.3,106746B1F58371.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F23277 windings=2 Phases=3 buses=[106888M3009.1.2.3,106888B1F23277.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F21415 windings=2 Phases=3 buses=[106825M3009.1.2.3,106825B1F21415.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F26466 windings=2 Phases=3 buses=[458904M3009.1.2.3,458904B0F26466.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F24167 windings=2 Phases=3 buses=[600471M3009.1.2.3,600471B0F24167.1.2.3] kVAs=[225.0,225.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.07 XHL=4.53
+! ALIMENTADOR: 3009
+New Transformer.F51609 windings=2 Phases=3 buses=[12533879M3009.1.2.3,12533879B0F51609.1.2.3] kVAs=[45.0,45.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.5 XHL=3.34
+! ALIMENTADOR: 3009
+New Transformer.F58003 windings=2 Phases=3 buses=[12998984M3009.1.2.3,12998984B1F58003.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F59643 windings=2 Phases=3 buses=[13155500M3009.1.2.3,13155500B0F59643.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F58004 windings=2 Phases=3 buses=[12998985M3009.1.2.3,12998985B1F58004.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F48507 windings=2 Phases=3 buses=[12232201M3009.1.2.3,12232201B0F48507.1.2.3] kVAs=[112.5,112.5] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.17 XHL=3.46
+! ALIMENTADOR: 3009
+New Transformer.F58005 windings=2 Phases=3 buses=[12998983M3009.1.2.3,12998983B1F58005.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F51878 windings=2 Phases=3 buses=[12546355M3009.1.2.3,12546355B0F51878.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! ALIMENTADOR: 3009
+New Transformer.F53190 windings=2 Phases=3 buses=[12675087M3009.1.2.3,12675087B0F53190.1.2.3] kVAs=[75.0,75.0] kVs=[13.800,0.220] conns=[delta,wye] %Rs=1.27 XHL=3.39
+! UNIDADES COMPENSADORAS DE REATIVO DE MEDIA TENSAO

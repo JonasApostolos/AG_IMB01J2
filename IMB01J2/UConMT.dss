@@ -1,0 +1,14 @@
+! UNIDADES CONSUMIDORAS DE MEDIA TENSAO 
+New Load.7017 Bus1=107132M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.900 kW=50.0 PF= 0.92 conn=delta
+New Load.7661 Bus1=504593M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=46.0 PF= 0.92 conn=delta
+New Load.8099 Bus1=694709M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.900 kW=70.0 PF= 0.92 conn=delta
+New Load.12042 Bus1=104831981M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=80.0 PF= 0.92 conn=delta
+New Load.12898 Bus1=12423346M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=191.41 PF= 0.92 conn=delta
+New Load.17832 Bus1=107187M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=14.4 PF= 0.92 conn=delta
+New Load.18316 Bus1=12546355M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=360.82 PF= 0.92 conn=delta
+New Load.19006 Bus1=107174M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=73.0 PF= 0.92 conn=delta
+New Load.19023 Bus1=107187M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=350.0 PF= 0.92 conn=delta
+New Load.19593 Bus1=106746M3009.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=104.99 PF= 0.92 conn=delta
+New Load.19617 Bus1=12155419M3009.1.0 Phases=1 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=11.400 kW=73.0 PF= 0.92 conn=delta
+! Sumário Rápido das Cargas
+! Somatório das potências das cargas sem curva de carga

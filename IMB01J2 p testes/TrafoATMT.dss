@@ -1,0 +1,2 @@
+! TRANSFORMADORES DE ALTA PARA MEDIA TENSAO 
+New Transformer.1238017 windings=2 Phases=3 buses=[CABIMB,IMB01J2.1.2.3] kVAs=[15000,15000] kVs=[69.000,13.800] conns=[delta,wye] tap=1

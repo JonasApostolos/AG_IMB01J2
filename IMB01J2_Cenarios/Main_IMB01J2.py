@@ -548,7 +548,7 @@ class DSS(object):  # Classe DSS
         medias_moveis.insert(0, medias_moveis[0])
         return medias_moveis
 
-    def Cenario(self, porcentagem_prosumidores=0.8):
+    def Cenario(self, porcentagem_prosumidores=0.4):
         self.compile_DSS()
         self.dss.text("Storage.storage.enabled=no")
 
@@ -568,7 +568,7 @@ class DSS(object):  # Classe DSS
             Epv = 7.89*0.97**2 # capacidade de geracao
             Ec = 0 # consumo diario medio
             for i in self.dss.loadshapes_read_pmult():
-                Ec += i * 0.25
+                Ec += i * 0.25 * self.dss.loads_read_kw()
             pmpp = round(Ec / Epv, 2)
             loaddict[load] = [numphases, bus, kvbase, pmpp]
 

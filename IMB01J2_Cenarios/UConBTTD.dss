@@ -1894,7 +1894,7 @@ New Load.1151780 Bus1=107003B1F21555.3.0 Phases=1 model=8 ZIPV=[0.5 0 0.5 1 0 0]
 ! Tranformador de Distribuicao: F21555
 New Load.1204261 Bus1=107003B1F21555.3.0 Phases=1 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=0.127 kW=2.15 PF= 0.92 conn=wye
 ! Tranformador de Distribuicao: F21555
-New Load.1235519 Bus1=107003B1F21555.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=0.220 kW=2095.0 PF= 0.92 conn=wye
+!New Load.1235519 Bus1=107003B1F21555.1.2.3.0 Phases=3 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=0.220 kW=2095.0 PF= 0.92 conn=wye
 ! Tranformador de Distribuicao: F21555
 New Load.1416280 Bus1=107003B1F21555.1.2.0 Phases=2 model=8 ZIPV=[0.5 0 0.5 1 0 0] Kv=0.220 kW=3.69 PF= 0.92 conn=wye
 ! Tranformador de Distribuicao: F21555
